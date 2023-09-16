@@ -17,6 +17,12 @@ h2{
     font-weight: bolder;
     font-style: italic;
 }
+h3{
+    font-size: 400%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
 .top, .main{
     margin: 8vw;
     background-color: gray;
