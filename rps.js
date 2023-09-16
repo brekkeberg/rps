@@ -5,6 +5,7 @@ const buttonPaper = document.querySelector('button#paper');
 const buttonScissors = document.querySelector('button#scissors');
 const compSelectionDiv = document.querySelector('#computerSelection');
 const playerSelectionDiv = document.querySelector('#playerSelection');
+const gameResultDiv = document.querySelector('#gameResult');
 const totalScoreDiv = document.querySelector('#totalScore');
 
 // runs function player's choice function upon button click
@@ -48,25 +49,26 @@ function game(){
             return "Tie!"
         } else if (playerSelection == "rock" && computerSelection == "paper"){
             computerScore ++;
-            return "Computer wins with Paper > Rock!"
+            return "Computer wins!"
         } else if (playerSelection == "rock" && computerSelection == "scissors"){
             playerScore ++;
-            return "You win with Rock > Scissors!"
+            return "You win!"
         } else if (playerSelection == "paper" && computerSelection == "scissors"){
             computerScore ++;
-            return "Computer wins with Scissors > Paper!"
+            return "Computer wins!"
         } else if (playerSelection == "paper" && computerSelection == "rock"){
             playerScore ++;
-            return "You win with Paper > Rock!"
+            return "You win!"
         } else if (playerSelection == "scissors" && computerSelection == "paper"){
             playerScore ++;
-            return "You win with Scissors > Paper!"
+            return "You win!"
         } else if (playerSelection == "scissors" && computerSelection == "rock"){
             computerScore ++;
-            return "Computer wins with Rock > Scissors!"
+            return "Computer wins!"
         } 
     }
     let gameOutcome = playRPSgame()
+    let totalScore = "Computer Score: " + computerScore + ", Player Score: " + playerScore + ", Ties: " + tieScore;
     console.log(gameOutcome);
     console.log(typeof(gameOutcome));
 
@@ -74,8 +76,8 @@ function game(){
     //let gameResult = playRPSgame()
     compSelectionDiv.textContent = computerSelection;
     playerSelectionDiv.textContent = playerSelection;
-    totalScoreDiv.textContent = gameOutcome;
-    console.log("Computer Score: " + computerScore + ", Player Score: " + playerScore + ", Ties: " + tieScore);
+    gameResultDiv.textContent = gameOutcome;
+    totalScoreDiv.textContent = totalScore;
 
     first = false;
     console.log(first);
