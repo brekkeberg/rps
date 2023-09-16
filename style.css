@@ -1,5 +1,6 @@
 *{
     font-family: sans-serif;
+    text-align: center;
 }
 img{
     background-size: cover;
@@ -7,13 +8,29 @@ img{
 }
 h1{
     font-size: 1.5vw;
-    text-align: center;
+}
+h2{
+    font-size: 700%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-weight: bolder;
+    font-style: italic;
+}
+.top, .main{
+    margin: 8vw;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 1vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .main{
     display: flex;
     flex-direction: row;
-    margin: 8vw;
+    
 }
 .main div{
     flex: 1;

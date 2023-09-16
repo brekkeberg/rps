@@ -7,6 +7,10 @@ const compSelectionDiv = document.querySelector('#computerSelection');
 const playerSelectionDiv = document.querySelector('#playerSelection');
 const gameResultDiv = document.querySelector('#gameResult');
 const totalScoreDiv = document.querySelector('#totalScore');
+const winnerDeclaredP = document.querySelector('#winnerDeclared');
+const compScoreDiv = document.querySelector('#compScore');
+const playerScoreDiv = document.querySelector('#playerScore');
+const tieScoreDiv = document.querySelector('#tieScore');
 
 // runs function player's choice function upon button click
 buttonRock.addEventListener('click', game)
@@ -17,7 +21,6 @@ buttonScissors.addEventListener('click', game)
 let tieScore = 0;
 let computerScore = 0;
 let playerScore = 0;
-let first = true;
 function game(){
 
     // random number between min and max
@@ -68,19 +71,34 @@ function game(){
         } 
     }
     let gameOutcome = playRPSgame()
-    let totalScore = "Computer Score: " + computerScore + ", Player Score: " + playerScore + ", Ties: " + tieScore;
+    let totalScore = "Comp: " + computerScore + "   Player: " + playerScore + "   Ties: " + tieScore;
     console.log(gameOutcome);
     console.log(typeof(gameOutcome));
 
 
-    //let gameResult = playRPSgame()
+    // outtput game data to page
     compSelectionDiv.textContent = computerSelection;
     playerSelectionDiv.textContent = playerSelection;
     gameResultDiv.textContent = gameOutcome;
-    totalScoreDiv.textContent = totalScore;
+    compScoreDiv.textContent = "Comp: " +computerScore;
+    playerScoreDiv.textContent = "Player: " + playerScore;
+    tieScoreDiv.textContent = "Tie: " + tieScore;
 
-    first = false;
-    console.log(first);
+    // detect if anyone has reached 5 points
+    if (computerScore  === 5){
+        winnerDeclaredP.textContent = "Computer wins!"
+        playerScore = 0
+        computerScore = 0
+        tieScore = 0
+    } else if (playerScore === 5){
+        winnerDeclaredP.textContent = "Player wins!"
+        playerScore = 0
+        computerScore = 0
+        tieScore = 0
+    } else{
+        winnerDeclaredP.textContent = ""
+    }
+
 }
 
 
