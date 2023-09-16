@@ -10,7 +10,7 @@ h1{
     font-size: 1.5vw;
 }
 h2{
-    font-size: 700%;
+    font-size: min(20vmin, 150px);
     padding: 0px;
     margin: 0px;
     border: 0px;
@@ -28,8 +28,8 @@ h3{
     background-color: gray;
     border-radius: 10px;
     padding: 1vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-top: 3vmin;
+    margin-bottom: 3vmin;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -40,7 +40,7 @@ h3{
 }
 .main div{
     flex: 1;
-    height: 40vh;
+    height: min(30vmin, 300px);
     width: 15%;
     margin: 2%;
     border-radius: 10px;
@@ -69,8 +69,10 @@ h3{
     border: 0px;
     text-align: center;
     box-shadow: none;
+    font-size: 3vmin;
 }
 button{
+    font-size: 20%;
     background-color: white;
     flex: 1;
     height: 15%;

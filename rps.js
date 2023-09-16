@@ -91,7 +91,7 @@ function game(){
         computerScore = 0
         tieScore = 0
     } else if (playerScore === 5){
-        winnerDeclaredP.textContent = "Player wins!"
+        winnerDeclaredP.textContent = "You win!"
         playerScore = 0
         computerScore = 0
         tieScore = 0
