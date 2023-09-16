@@ -10,7 +10,7 @@ h1{
     font-size: 1.5vw;
 }
 h2{
-    font-size: min(20vmin, 150px);
+    font-size: min(20vmin, 120px);
     padding: 0px;
     margin: 0px;
     border: 0px;
@@ -22,6 +22,9 @@ h3{
     padding: 0px;
     margin: 0px;
     border: 0px;
+}
+p{
+    font-size: max(2vmin, 10px);
 }
 .top, .main{
     margin: 8vw;
@@ -69,7 +72,7 @@ h3{
     border: 0px;
     text-align: center;
     box-shadow: none;
-    font-size: 3vmin;
+    font-size: 2vmin;
 }
 button{
     font-size: 20%;
